@@ -2,9 +2,8 @@
 const express = require('express');
 const bodyparser = require('body-parser')
 require('dotenv').config()
-
-const {PORT, BASE_URL} = process.env
-
+const {PORT, BASE_URL, DB_URL} = process.env
+const mongoose = require('./config/mongo.config')
 
 //initializing your packages
 const app = express();
@@ -17,6 +16,7 @@ app.use(bodyparser.json());
 app.use('/api', require('./routes/home.routes'));
 
 //starter server
-app.listen(process.env.PORT || 3000 , () => {
+app.listen(PORT , async () => {
+    await mongoose(DB_URL)
     console.log(`app is running on port ${BASE_URL}${PORT}`)
 });

@@ -4,6 +4,9 @@ const router = express.Router();
 const newsController = require('../controllers/news.controller')
 const checkNumber = require('../Middleware/news.middleware')
 
-router.get('/create', checkNumber, newsController.create) 
+router.post('/create', checkNumber, newsController.create) ;
+router.put("/update/:postId" ,  newsController.update);
+router.get('/read', newsController.read);
+router.delete("/delete/:postId" ,  newsController.delete);
 
 module.exports = router;
