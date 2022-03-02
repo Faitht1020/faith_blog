@@ -1,5 +1,5 @@
 # faith_blog
-Building a blog-app, using node js, express and, mongoDB
+Building a blog-app, using node js, express and mongoDB. 
 I created a root directory for my project, created some folders and files I need for the project under it, such as the route, middleware, controller folders, 
 also, the server file and the environment setup file. I downloaded the packages and dependencies I need too, such as express, ejs, mongoose, body-parser and dotenv.
 I require my packages and dependencies in my server file and I  initialized them. I also require the path to my route in thesame fille and they were all used in the file, 
